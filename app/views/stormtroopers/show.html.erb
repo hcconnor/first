@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @stormtrooper.name %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @stormtrooper.unit %>
+</p>
+
+<%= link_to 'Edit', edit_stormtrooper_path(@stormtrooper) %> |
+<%= link_to 'Back', stormtroopers_path %>

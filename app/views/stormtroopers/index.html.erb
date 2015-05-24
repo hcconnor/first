@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>All of the Stormtroopers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Unit</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stormtroopers.each do |stormtrooper| %>
+      <tr>
+        <td><%= stormtrooper.name %></td>
+        <td><%= stormtrooper.unit %></td>
+        <td><%= link_to 'Show', stormtrooper %></td>
+        <td><%= link_to 'Edit', edit_stormtrooper_path(stormtrooper) %></td>
+        <td><%= link_to 'Destroy', stormtrooper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stormtrooper', new_stormtrooper_path %>
